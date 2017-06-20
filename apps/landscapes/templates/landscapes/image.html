@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Random Routing</title>
+    {% load staticfiles %}
+  </head>
+  <body>
+    Your Random Image of the Day:
+    {% with imageaddress="landscapes/img/"|add:landscape|add:".jpg" %}
+    <img src={% static imageaddress %} alt={{landscape}}>
+    {% endwith %}
+  </body>
+</html>
